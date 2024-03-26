@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 0;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        math-field {
+            width: 100%;
+            display: block;
+            margin: auto;
+        }
+
+
+        body {
+            --keycap-height: 24px;
+            --keycap-font-size: 16px;
+            --keycap-shift-font-size: 9px;
+            --keycap-small-font-size: 9px;
+            --keycap-extra-small-font-size: 9px;
+            --keyboard-toolbar-font-size: 16px;
+            --keycap-gap: 1px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            body {
+                padding-top: 10px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h6>Type Your Equation</h6>
+    <div class="form-group">
+
+        <math-field id="formula" style="min-height: 150px;">
+            x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+        </math-field>
+    </div>
+    
+</div>
+
+<script defer src="//unpkg.com/mathlive"></script>
+<script src='plugin.js'></script>
+
+</body>
+
+</html>
