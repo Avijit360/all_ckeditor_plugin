@@ -22,11 +22,6 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 	<h1 class="samples">
 		<a href="../../../samples/old/index.html">CKEditor Samples</a> &raquo; Mathematical Formulas
 	</h1>
-
-	<label>Mathfield</label>
-<math-field id="formula">
-    x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
-</math-field>  
 	<div class="warning deprecated">
 		This sample is not maintained anymore. Check out its <a href="https://ckeditor.com/docs/ckeditor4/latest/examples/mathjax.html">brand new version in CKEditor Examples</a>.
 	</div>
@@ -39,26 +34,5 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 			Copyright &copy; 2003-2023, <a class="samples" href="https://cksource.com/">CKSource</a> Holding sp. z o.o. All rights reserved.
 		</p>
 	</div>
-
-<script>
-
-
-const mf = document.getElementById("formula");
-const latex = document.getElementById("latex");
-
-mf.addEventListener("input",(ev) => latex.value = mf.value);
-
-latex.value = mf.value;
-
-// Listen for changes in the "latex" text field, 
-// and reflect its value in the mathfield.
-
-latex.addEventListener("input", (ev) => 
-    mf.setValue(
-      ev.target.value, 
-      {silenceNotifications: true}
-    )
-);
-</script>
 </body>
 </html>
