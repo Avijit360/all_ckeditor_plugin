@@ -5,23 +5,6 @@
 
 'use strict';
 
-const mf = document.getElementById("formula");
-const latex = document.getElementById("latex");
-
-mf.addEventListener("input",(ev) => latex.value = mf.value);
-
-latex.value = mf.value;
-
-// Listen for changes in the "latex" text field, 
-// and reflect its value in the mathfield.
-
-latex.addEventListener("input", (ev) => 
-    mf.setValue(
-      ev.target.value, 
-      {silenceNotifications: true}
-    )
-);
-
 CKEDITOR.dialog.add( 'mathjax', function( editor ) {
 
 	var preview,
